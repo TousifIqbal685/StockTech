@@ -1,0 +1,122 @@
+<div>
+  <div class="flex flex-row">
+    <button (click)="goBack()" class="back-button flex flex-col">
+      <i class="fas fa-arrow-left flex flex-col"></i> Go back to Profile
+    </button>
+    <h2>{{code}}</h2>
+  </div>
+  
+  <br><br>
+  <!-- stoch -->
+  <div class="row">
+    <div class="col-sm-8">
+      <h3>STOCH</h3>
+      <br>
+      <div class="left">
+        <apx-chart [series]="lineGraph.series" [colors]="lineGraph.colors" [stroke]="lineGraph.stroke"
+          [chart]="lineGraph.chart" [xaxis]="lineGraph.xaxis" [yaxis]="lineGraph.yaxis"></apx-chart>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <br>
+      <div class="description">
+
+        <h5>Interpretation</h5>
+        <p>{{ stoch }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- rsi -->
+  <div class="row">
+    <div class="col-sm-8">
+      <h3>RSI</h3>
+      <br>
+      <div class="left">
+        <apx-chart [series]="lineGraph2.series" [chart]="lineGraph2.chart" [xaxis]="lineGraph2.xaxis"  [yaxis]="lineGraph2.yaxis"></apx-chart>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <br>
+      <div class="description">
+
+        <h5>Interpretation</h5>
+        <p>{{ rsi }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- bb -->
+  <div class="row">
+    <div class="col-sm-8">
+      <h3>BB</h3>
+      <br>
+      <div class="left">
+        <apx-chart [series]="lineGraph3.series" [chart]="lineGraph3.chart" [xaxis]="lineGraph3.xaxis"  [yaxis]="lineGraph3.yaxis"></apx-chart>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <br>
+      <div class="description">
+        <h5>Interpretation</h5>
+        <p>{{ bb }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ema -->
+  <div class="row">
+    <div class="col-sm-8">
+      <h3>EMA</h3>
+      <br>
+      <div class="left">
+        <apx-chart [series]="lineGraph4.series" [chart]="lineGraph4.chart" [xaxis]="lineGraph4.xaxis"  [yaxis]="lineGraph4.yaxis"></apx-chart>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <br>
+      <div class="description">
+        <h5>Interpretation</h5>
+        <p>{{ ema }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- sma -->
+  <div class="row">
+    <div class="col-sm-8">
+      <h3>SMA</h3>
+      <br>
+      <div class="left">
+        <apx-chart [series]="lineGraph5.series" [chart]="lineGraph5.chart" [xaxis]="lineGraph5.xaxis "  [yaxis]="lineGraph5.yaxis"></apx-chart>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <br>
+      <div class="description">
+        <h5>Interpretation</h5>
+        <p>{{ sma }}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- macd -->
+  <div class="row">
+    <div class="col-sm-8">
+      <h3>MACD</h3>
+      <br>
+      <div class="left">
+        <apx-chart [series]="lineGraph6.series" [plotOptions]="lineGraph6.plotOptions" [chart]="lineGraph6.chart" [xaxis]="lineGraph6.xaxis"  [yaxis]="lineGraph6.yaxis"></apx-chart>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <br>
+      <div class="description">
+        <h5>Interpretation</h5>
+        <p>{{ macd }}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,98 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="text-center">
+        <h1>{{basicData.FullName}}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <br>
+    <div class="col-sm-4">
+      <br><br>
+      <p><strong>Full Name:</strong> {{basicData.FullName}}</p>
+      <p><strong>Trade Code:</strong> {{basicData.Scrip}}</p>
+      <pre><a href="https://{{basicData.Web}}/">Click here to visit website</a></pre>
+      <br>
+      <div style="width: 100% ;text-align:center;">
+       
+        <button style="margin:5px;" class="btn btn-success" (click)="showGraph()"><i
+            class="fas fa-chart-line"></i>
+          View Indicator</button>
+        
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <br> <br>
+      <p><strong>Last Trading Price:</strong> {{basicData.LastTrade}}</p>
+      <p><strong>Open Price:</strong> {{basicData.OpenPrice}}</p>
+      <p><strong>Close Price:</strong> {{basicData.ClosePrice}}</p>
+      <p><strong>YCP:</strong> {{basicData.YCP}}</p>
+      <p><strong>Change:</strong> {{basicData.Change}}</p>
+      <p><strong>Total Volume:</strong> {{basicData.Volume}}</p>
+
+    </div>
+
+    <div class="col-sm-3">
+      <br> <br>
+      <p><strong>Market Capital:</strong> {{basicData.MarketCap}}</p>
+      <p><strong>Total Shares:</strong> {{basicData.TotalSecurities}}</p>
+      <p><strong>Total Trade:</strong> {{basicData.TotalTrade}}</p>
+      <p><strong>Earnings Per Share(EPS):</strong> {{basicData.EPS}}</p>
+      <p><strong>P/E ratio:</strong> {{basicData.AuditedPE}}</p>
+      <p><strong>Dividend Yield:</strong> {{basicData.DividentYield}}</p>
+    </div>
+
+    <div class="col-sm-2">
+      <br> <br>
+      <p><strong>Day's Range:</strong> </p>
+      <p> {{basicData.DayRange}}</p>
+      <p><strong>52 weeks Range:</strong> </p>
+      <p> {{basicData. Week52Range}}</p>
+      <p><strong>Category:</strong> {{basicData.MarketCategory}}</p>
+      <p><strong>Listed since:</strong> {{basicData.ListingYear}}</p>
+
+    </div>
+  </div>
+<br><br>
+  <div class="row">
+    <div class=" row col-sm-12">
+      <br>
+      <h3>Performance graph</h3>
+      <br><br><br>
+      <apx-chart class="custom-chart" [series]="lineGraph.series" [chart]="lineGraph.chart" [xaxis]="lineGraph.xaxis" [yaxis]="lineGraph.yaxis"></apx-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <br><br>
+      <h3>Bull vs Bear</h3><br>
+      <apx-chart [series]="pieChart3.series" [chart]="pieChart3.chart" [labels]="pieChart3.labels"
+        [xaxis]="pieChart3.xaxis" [colors]="pieChart3.colors" [theme]="pieChart3.theme"></apx-chart>
+    </div>
+    <div class="col-md-6">
+      <br><br>
+      <h3>Capital portion graph</h3>
+      <apx-chart [series]="pieChart2.series" [chart]="pieChart2.chart" [labels]="pieChart2.labels"
+        [xaxis]="pieChart2.xaxis" [colors]="pieChart2.colors" [theme]="pieChart2.theme"></apx-chart>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Shareholding pattern</h3>
+      <pre style="text-align:center;">{{basicData.ShareHoldingPercentage}}</pre>
+      <apx-chart [series]="pieChart.series" [chart]="pieChart.chart" [labels]="pieChart.labels" [xaxis]="pieChart.xaxis"
+        [theme]="pieChart.theme"></apx-chart>
+    </div>
+    <div class="col-md-6" id="right4">
+      <h3>News</h3>
+      <div *ngFor="let news of newsData">      
+        <strong>{{ news.title }}:</strong><br>
+        <small>{{ news.body }}</small>
+        <br><br>
+      </div>
+    </div>
+  </div>
+</div>

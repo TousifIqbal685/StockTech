@@ -1,0 +1,16 @@
+<div>
+  <h1>News</h1>
+</div>
+
+<div *ngFor="let news of newsData.articles">
+  <div id="article" class="p-20 m-4 bg-blue-100 border border-gray-500 rounded-lg">
+    <a href="{{news.url}}" id="link" target="_blank">
+      <h4>{{ news.title }}</h4>
+      <small>{{ news.publishedAt }}</small>
+      <p>{{ news.author }}</p>
+      <p>{{ news.content }}</p>
+      <a href="{{news.url}}" target="_blank">Read more...</a>
+    </a>
+    <br>
+  </div>
+</div>

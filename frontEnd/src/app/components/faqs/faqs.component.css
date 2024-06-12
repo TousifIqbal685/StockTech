@@ -1,0 +1,17 @@
+.faq-section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .question-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .answer {
+    font-size: 1em;
+    line-height: 1.5;
+  }

@@ -1,0 +1,45 @@
+h1,h2,h3,h4,h5 {
+    text-align: center;
+    color: black;
+}
+
+p,pre{
+padding-left: 10%;
+}
+
+#right4 {
+  float: left;
+  width: 48%;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px;
+  overflow-y: auto;
+  height: 300px;
+  padding: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #denied{
+    height: 400px; 
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-chart {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 12px;
+}

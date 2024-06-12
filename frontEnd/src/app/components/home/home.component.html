@@ -1,0 +1,47 @@
+<div class="container">
+  <div>
+    <h1>Welcome to StockTech!</h1>
+  </div>
+  <div *ngIf="spinner" id="left">
+  </div>
+  <div *ngIf="!spinner" id="left">
+    <br>
+    <h3>Company Data</h3>
+    <table datatable [dtOptions]="dtOptions" class="hover"></table>
+  </div>
+
+  <div id="right1">
+    <br>
+    <h3>DSEX</h3>
+    <apx-chart [series]="lineGraph.series" [chart]="lineGraph.chart" [dataLabels]="lineGraph.dataLabels"
+      [stroke]="lineGraph.stroke" [xaxis]="lineGraph.xaxis" [yaxis]="lineGraph.yaxis"  [yaxis]="lineGraph.yaxis"></apx-chart>
+  </div>
+
+  <div id="right2">
+    <h3>DSES</h3>
+    <apx-chart [series]="lineGraph2.series" [chart]="lineGraph2.chart" [dataLabels]="lineGraph.dataLabels"
+      [stroke]="lineGraph.stroke" [xaxis]="lineGraph2.xaxis" [yaxis]="lineGraph2.yaxis"></apx-chart>
+  </div>
+
+  <div id="right3">
+    <h3>DS30</h3>
+    <apx-chart [series]="lineGraph3.series" [chart]="lineGraph3.chart" [dataLabels]="lineGraph.dataLabels"
+      [stroke]="lineGraph.stroke" [xaxis]="lineGraph3.xaxis" [yaxis]="lineGraph3.yaxis"></apx-chart>
+  </div>
+
+  <div id="left2">
+    <br>
+    <h3>Sector wise data</h3>
+    <apx-chart [series]="barGraph.series" [chart]="barGraph.chart" [xaxis]="barGraph.xaxis" [stroke]="barGraph.stroke"
+      [tooltip]="barGraph.tooltip" [dataLabels]="barGraph.dataLabels" [legend]="barGraph.legend"
+      [markers]="barGraph.markers" [grid]="barGraph.grid" [yaxis]="barGraph.yaxis" [fill]="barGraph.fill"
+      [title]="barGraph.title" [plotOptions]="barGraph.plotOptions"></apx-chart>
+  </div>
+
+  <div id="right4">
+    <br>
+    <h3>Gainer-Loser Ratio</h3>
+    <apx-chart [series]="pieChart.series" [chart]="pieChart.chart" [labels]="pieChart.labels" [xaxis]="pieChart.xaxis"
+      [colors]="pieChart.colors"></apx-chart>
+  </div>
+</div>
